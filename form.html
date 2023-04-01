@@ -1,9 +1,32 @@
-<form action="{{ url_for("flask_mongodb_atlas")}}" method="POST">
-    <label for="firstname">First Name:</label>
-    <input type="text" id="firstname" name="fname" placeholder="firstname">
-    <label for="lastname">Last Name:</label>
-    <input type="text" id="lastname" name="lname" placeholder="lastname">
-    
-    <input type = "file" id="myfile" name = "ans1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <title>Answer Sheet Assesment</title>
+</head>
+<body>
+    <h1 class="head">Submit Your Answers Here!</h1>
+    <form action="{{ url_for(" flask_mongodb_atlas")}}" method="POST" enctype="multipart/form-data">
 
-    <button type="submit">Login</button>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+    
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+    
+        <label for="roll-number">Roll Number:</label>
+        <input type="text" id="roll-number" name="roll-number" placeholder = "Roll Number (eg:15)"required>
+    
+        <label for="file-upload">Upload File:</label>
+        <input type="file" id="file-upload" name="file-upload">
+
+        <h5><b>(NOTE : ALL FILES MUST BE UPLODED IN IMAGE FORMAT)<b></h5>
+    
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
